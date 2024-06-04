@@ -1,13 +1,15 @@
-import { useTranslation } from 'react-i18next'
+import React from 'react';
 
-export default function Header() {
-  const { t, i18n } = useTranslation("global")
-
+const Header = ({ language, setLanguage, translations }) => {
   return (
     <header>
-      {t("header.chooseLanguage")}
-      <button onClick={() => i18n.changeLanguage("en")}>EN</button>
-      <button onClick={() => i18n.changeLanguage("ua")}>UA</button>
+      <h2>{translations[language].header.chooseLanguage}</h2>
+      <div className="language-buttons">
+        <button onClick={() => setLanguage('en')}>EN</button>
+        <button onClick={() => setLanguage('ua')}>UA</button>
+      </div>
     </header>
-  )
-}
+  );
+};
+
+export default Header;
