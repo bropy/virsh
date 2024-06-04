@@ -11,39 +11,62 @@ function Form() {
     setLines(text.split('\n').filter(line => line.trim() !== ''));
   }, [text]);
 
-  const handleInputChange = (event) => {
-    setText(event.target.value);
+  useEffect(() => {
+    const verseInput = verseInputRef.current;
+
+    const handleInput = () => {
+      setText(verseInput.innerText);
+    };
+
+    if (verseInput) {
+      verseInput.addEventListener('input', handleInput);
+    }
+
+    return () => {
+      if (verseInput) {
+        verseInput.removeEventListener('input', handleInput);
+      }
+    };
+  }, []);
+
+  const handleLineClick = (index) => {
+    setSelectedLine(index);
   };
 
-  // Function to count vowels in a string (case-insensitive)
+  // Function to count vowels (case-insensitive)
   const countVowels = (str) => {
-    const vowelsRegex = /[aeiouyæøåäöüìíòóùúâêîôûãõẽĩũ]/gi; // Expanded for common vowels
+    const vowelsRegex = /[уеїєоаіыэяиюaeiouyæøåäöüìíòóùúâêîôûãõẽĩũ]/gi;
     const matches = str.match(vowelsRegex);
     return matches ? matches.length : 0;
   };
 
   return (
     <div className="verse-container">
-      <div className="line-numbers">
-        {lines.map((line, index) => (
-          <div
-            key={index}
-            onClick={() => setSelectedLine(index)}
-            className={selectedLine === index ? 'selected-line' : ''}
-          >
-            {index + 1}
-            <span className="vowel-count">
-              {countVowels(line)}
-            </span>
-          </div>
-        ))}
+      <div className="line-numbers-container">
+        <div className="line-numbers">
+          {lines.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => handleLineClick(index)}
+              className={selectedLine === index ? 'selected-line' : ''}
+            >
+              {index + 1}
+            </div>
+          ))}
+        </div>
+
       </div>
-      <textarea
-        ref={verseInputRef}
-        value={text}
-        onChange={handleInputChange}
+      <div
+        id="verseInput"
         className="verse-input"
+        contentEditable="true"
+        ref={verseInputRef}
       />
+              <div className="vowel-counts">
+          {lines.map((line, index) => (
+            <div key={index}>{countVowels(line)}</div>
+          ))}
+        </div>
     </div>
   );
 }
