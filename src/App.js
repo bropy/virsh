@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import enTranslations from './locales/en/global.json';
+import uaTranslations from './locales/ua/global.json';
 
 function App() {
+  const [language, setLanguage] = useState('en');
+
+  const translations = {
+    en: enTranslations,
+    ua: uaTranslations,
+  };
+
+  useEffect(() => {
+    document.title = translations[language].mainSection.title;
+    window.history.replaceState(null, '', `/${language}`);
+  }, [language, translations]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h2>{translations[language].header.chooseLanguage}</h2>
+        <div className="language-buttons">
+          <button onClick={() => setLanguage('en')}>English</button>
+          <button onClick={() => setLanguage('ua')}>Українська</button>
+        </div>
       </header>
+      <main>
+        <h1>{translations[language].mainSection.title}</h1>
+        {/* ...other content */}
+      </main>
     </div>
   );
 }
