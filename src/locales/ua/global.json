@@ -2,6 +2,11 @@
     "header": {
      "chooseLanguage": "Оберіть мову:"
     },
+    "style": {
+        "chooseStyle": "Оберіть стиль віршу:",
+        "freeVerse": "Вільний стиль",
+        "sonnet": "Сонет"
+       },
     "mainSection": {
      "title": "Віршовий розмір онлайн"
     }

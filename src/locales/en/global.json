@@ -2,6 +2,11 @@
     "header": {
      "chooseLanguage": "Choose language:"
     },
+    "style": {
+        "chooseStyle": "Choose verse style:",
+        "freeVerse": "Free verse",
+        "sonnet": "Sonnet"
+       },
     "mainSection": {
      "title": "Lyric size online"
     }
