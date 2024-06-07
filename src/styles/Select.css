@@ -1,0 +1,27 @@
+.style-buttons {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 10px; 
+    gap: 10px; 
+    margin-right: 2%;
+}
+
+.style-buttons button {
+    color: #323232; 
+    margin-right: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.style-buttons button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Remove these individual button styles */
+/*.style-buttons button:nth-child(1) { background-color: #E6A7FF; } 
+.style-buttons button:nth-child(2) { background-color: #A7E6C7; }
+/* ... etc. */

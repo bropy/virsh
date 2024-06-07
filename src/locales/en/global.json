@@ -1,13 +1,22 @@
 {
     "header": {
-     "chooseLanguage": "Language: "
+      "chooseLanguage": "Language: "
     },
     "style": {
-        "chooseStyle": "Choose verse style:",
-        "freeVerse": "Free verse",
-        "sonnet": "Sonnet"
-       },
+      "chooseStyle": "Choose verse style:",
+      "selectedStyle":"Current style",
+      "verseStyles": [
+        "Free verse",
+        "Sonnet",
+        "Haiku",
+        "Limerick",
+        "Ballad",
+        "Ode",
+        "Epic"
+      ]
+    },
     "mainSection": {
-     "title": "Lyric size online"
+      "title": "Lyric size online"
     }
-   }
+  }
+  
