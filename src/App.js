@@ -48,7 +48,10 @@ function App() {
         translations={translations}
         language={language}
       />
-      <Footer/>
+      <Footer
+        translations={translations}
+        language={language}
+      />
     </div>
   );
 }
