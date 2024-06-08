@@ -40,6 +40,12 @@ function Form() {
     return matches ? matches.length : 0;
   };
 
+  const handlePaste = (event) => {
+    event.preventDefault();
+    const text = event.clipboardData.getData('text/plain'); // Get plain text
+    document.execCommand('insertText', false, text);
+  };
+
   return (
     <div className="verse-container">
       <div className="line-numbers-container">
@@ -54,19 +60,21 @@ function Form() {
             </div>
           ))}
         </div>
-
       </div>
+
       <div
         id="verseInput"
         className="verse-input"
         contentEditable="true"
         ref={verseInputRef}
+        onPaste={handlePaste} // Add paste handler
       />
-              <div className="vowel-counts">
-          {lines.map((line, index) => (
-            <div key={index}>{countVowels(line)}</div>
-          ))}
-        </div>
+
+      <div className="vowel-counts">
+        {lines.map((line, index) => (
+          <div key={index}>{countVowels(line)}</div>
+        ))}
+      </div>
     </div>
   );
 }

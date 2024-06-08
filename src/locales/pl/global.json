@@ -1,0 +1,22 @@
+{
+    "header": {
+      "chooseLanguage": "Język: "
+    },
+    "style": {
+      "chooseStyle": "Wybierz styl wiersza:",
+      "selectedStyle": "Aktualny styl",
+      "verseStyles": [
+        "Wiersz wolny",
+        "Sonet",
+        "Haiku",
+        "Limerick",
+        "Ballada",
+        "Oda",
+        "Epos"
+      ]
+    },
+    "mainSection": {
+      "title": "Rozmiar liryki online"
+    }
+  }
+  

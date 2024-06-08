@@ -1,13 +1,16 @@
+/* Select.css */
+
 .style-buttons {
     display: flex;
-    justify-content: flex-end; 
-    margin-top: 10px; 
-    gap: 10px; 
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 10px;
     margin-right: 2%;
-}
-
-.style-buttons button {
-    color: #323232; 
+  }
+  
+  .style-buttons button {
+    color: #323232;
     margin-right: 5px;
     padding: 8px 16px;
     border: none;
@@ -15,13 +18,30 @@
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.style-buttons button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-/* Remove these individual button styles */
-/*.style-buttons button:nth-child(1) { background-color: #E6A7FF; } 
-.style-buttons button:nth-child(2) { background-color: #A7E6C7; }
-/* ... etc. */
+  }
+  
+  .style-buttons button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .style-buttons button.selected {
+    border: 2px solid #323232; /* Indicate selected button */
+  }
+  
+  @media (max-width: 600px) {
+    .style-buttons {
+      justify-content: center; /* Center buttons on small screens */
+      margin-right: 0;
+    }
+  
+    .style-buttons button {
+      margin-right: 0;
+    }
+  }
+  
+  .selected-style {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  

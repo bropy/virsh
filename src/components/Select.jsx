@@ -1,47 +1,46 @@
-import React, { useEffect, useRef, useMemo, useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import '../styles/Select.css';
 
-const Select = ({ language, setLanguage, translations }) => {
+const Select = ({ language, translations }) => {
   const pastelColors = useMemo(() => ['#E6A7FF', '#A7E6C7', '#FFE6A7', '#FFA7A7', '#A7CCE6'], []);
-  const currentColorIndex = useRef(0);
+  const [colorIndex, setColorIndex] = useState(0);
   const [selectedStyle, setSelectedStyle] = useState(0);
 
-  useEffect(() => {
-    const buttons = document.querySelectorAll('.style-buttons button');
+  const handleButtonClick = (index) => {
+    setColorIndex((prevIndex) => (prevIndex + 1) % pastelColors.length);
+    setSelectedStyle(index);
+  };
 
-    buttons.forEach((button, index) => {
-      button.style.backgroundColor = pastelColors[index % pastelColors.length];
+  const getButtonColor = (index) => {
+    return pastelColors[(index + colorIndex) % pastelColors.length];
+  };
 
-      button.addEventListener('click', () => {
-        currentColorIndex.current = (currentColorIndex.current + 1) % pastelColors.length;
-        buttons.forEach((btn, idx) => {
-          btn.style.backgroundColor = pastelColors[(idx + currentColorIndex.current) % pastelColors.length];
-        });
-
-        setLanguage(button.textContent.toLowerCase());
-        setSelectedStyle(index);
-      });
-    });
-
-    return () => {
-      buttons.forEach(button => {
-        button.removeEventListener('click', null);
-      });
-    };
-  }, [setLanguage, pastelColors]);
+  const verseStyles = translations[language]?.style?.verseStyles || [];
 
   return (
     <div>
-      <h2>{translations[language].style.chooseStyle}</h2>
-      <div className="style-buttons">
-        {translations[language].style.verseStyles.map((style, index) => (
-          <button key={index} className={selectedStyle === index ? 'selected' : ''}>
+      <h2 id="style-chooser">{translations[language]?.style?.chooseStyle || "Choose Style"}</h2>
+      <div
+        className="style-buttons"
+        role="radiogroup"
+        aria-labelledby="style-chooser"
+      >
+        {verseStyles.map((style, index) => (
+          <button
+            key={index}
+            className={selectedStyle === index ? 'selected' : ''}
+            style={{ backgroundColor: getButtonColor(index) }}
+            onClick={() => handleButtonClick(index)}
+            role="radio"
+            aria-checked={selectedStyle === index}
+            tabIndex={selectedStyle === index ? 0 : -1}
+          >
             {style}
           </button>
         ))}
       </div>
       <p className="selected-style">
-      {translations ? <Select language={language} setLanguage={setLanguage} translations={translations} /> : <p>Loading...</p>}
+        {verseStyles[selectedStyle] || "No style selected"}
       </p>
     </div>
   );

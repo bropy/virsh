@@ -1,38 +1,5 @@
-.verse-container {
-  display: flex;
-  position: relative;
-}
-
-.line-numbers {
-  border: 1px solid #ccc;
-  padding: 10px;
-  min-height: 150px;
-  font-size: medium;
-  line-height: 1.5;
-  white-space: pre-wrap;
-  font-family: serif;
-}
-
-.verse-input {
-  flex: 1;
-  border: 1px solid #ccc;
-  padding: 10px;
-  min-height: 150px;
-  font-size: medium;
-  line-height: 1.5;
-  white-space: pre-wrap;
-  font-family: serif;
-  position: relative;
-}
-
-.vowel-counts {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: medium;
-  line-height: 1.5;
-  white-space: pre-wrap;
-  font-family: serif;
+.verse-container{
+  margin-top: 5%;
 }
 
 .selected-line::before,
@@ -51,4 +18,78 @@
 
 .selected-line::after {
   right: -5px;
+}
+.verse-container {
+  display: flex;
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 30%;
+}
+
+/* ... (rest of the CSS is the same) */
+
+
+.verse-input * {  /* Target all elements within the textarea */
+  font-size: medium !important; /* Force inherit the correct size */
+  font-family: serif !important; /* Force inherit the correct font */
+}
+/* Form.css */
+.verse-container {
+  display: flex;
+  position: relative;
+}
+
+.line-numbers {
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  min-height: 150px;
+  font-size: medium;
+  line-height: 1.5;
+  font-family: serif;
+border-radius: 10px;
+  /* Cool Inset Shadow */
+  box-shadow: inset 2px 0 5px rgba(58, 58, 58, 0.15); /* Adjust values as needed */
+}
+
+.verse-container{
+  border-radius: 10px;
+  border:1px solid rgb(99, 99, 99);
+}
+.verse-input {
+  flex: 1;
+  padding: 10px;
+  min-height: 150px;
+  font-size: medium;
+  line-height: 1.5;
+  /* Removed white-space: pre-wrap; */
+  font-family: serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.vowel-counts {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 3px;
+  font-size: medium;
+  line-height: 1.5;
+  border-left: 1px solid #ccc;
+  /* Enhanced Box Shadow */
+  box-shadow: 
+  0 11px 11px rgba(63, 63, 63, 0.23), /* Subtle base shadow */
+  0 4px 8px rgba(65, 65, 65, 0.48);/* Slightly larger, softer shadow */
+  /* Removed white-space: pre-wrap; */
+  font-family: serif;
+}
+
+
+/* ... (rest of the CSS is the same) */
+
+.verse-input * { 
+  /* Removed !important to allow for user-defined styles */
+  font-size: inherit;  
+  font-family: inherit; 
 }

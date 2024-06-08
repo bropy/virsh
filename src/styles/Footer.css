@@ -1,0 +1,45 @@
+/* Footer Styles */
+footer {
+    background-color: #282c34; 
+    color: #abb2bf; 
+    padding: 20px;
+    text-align: center;
+    position: relative; 
+    bottom: 0; 
+    margin-top: auto; 
+  }
+  
+  .footer-content {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info a {
+    color: #61afef; 
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    font-size: 0.9em;
+    margin-top: 10px; 
+  }
+  
+  /* Optional: Add a subtle glow effect on hover */
+  .contact-info a:hover {
+    filter: drop-shadow(0 0 5px #61afef);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column; 
+    }
+  }
+  

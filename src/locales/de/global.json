@@ -1,0 +1,22 @@
+{
+    "header": {
+      "chooseLanguage": "Sprache: "
+    },
+    "style": {
+      "chooseStyle": "Versart wählen:",
+      "selectedStyle": "Aktueller Stil",
+      "verseStyles": [
+        "Freie Verse",
+        "Sonett",
+        "Haiku",
+        "Limerick",
+        "Ballade",
+        "Ode",
+        "Epos"
+      ]
+    },
+    "mainSection": {
+      "title": "Lyric Größe online"
+    }
+  }
+  

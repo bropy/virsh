@@ -1,31 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import enTranslations from './locales/en/global.json';
 import uaTranslations from './locales/ua/global.json';
+import crhTranslations from './locales/crh/global.json';
+import plTranslations from './locales/pl/global.json';
+import deTranslations from './locales/de/global.json';
 import Header from './components/Header'; 
 import Form from './components/Form';
 import Select from './components/Select';
+import Footer from './components/Footer'; 
 
+import "./App.css";
 
-const translations = {  // Move translations outside of the component
+const translations = {
   en: enTranslations,
   ua: uaTranslations,
+  crh: crhTranslations,
+  pl: plTranslations,
+  de: deTranslations,
 };
 
 function App() {
   const [language, setLanguage] = useState('en');
+  const [selectedStyle, setSelectedStyle] = useState(0);
 
   useEffect(() => {
-    document.title = translations[language].mainSection.title;
+    document.title = translations[language]?.mainSection?.title || "Lyric Size Online";
     window.history.replaceState(null, '', `/${language}`);
   }, [language]); 
+
+  if (!translations[language]) {
+    return <div>Loading translations...</div>;
+  }
 
   return (
     <div>
       <Header language={language} setLanguage={setLanguage} translations={translations} />
-      <Select language={language} setLanguage={setLanguage} translations={translations}/>
-      <h1>{translations[language].mainSection.title}</h1>
-      <Form/>
-
+      <Select 
+        language={language}
+        setLanguage={setLanguage}
+        translations={translations}
+        selectedStyle={selectedStyle}
+        setSelectedStyle={setSelectedStyle}
+      />
+      <h1 className='main-header'>{translations[language].mainSection.title}</h1>
+      <Form 
+        selectedStyle={selectedStyle}
+        translations={translations}
+        language={language}
+      />
+      <Footer/>
     </div>
   );
 }

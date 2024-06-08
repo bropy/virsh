@@ -1,0 +1,22 @@
+{
+    "header": {
+      "chooseLanguage": "Til: "
+    },
+    "style": {
+      "chooseStyle": "Şiir türüni seçin:",
+      "selectedStyle": "Ağımdaki tür",
+      "verseStyles": [
+        "Serbest şiir",
+        "Sonet",
+        "Haiku",
+        "Limerick",
+        "Ballada",
+        "Qaside",
+        "Destan"
+      ]
+    },
+    "mainSection": {
+      "title": "Lirik boyu online"
+    }
+  }
+  

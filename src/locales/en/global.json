@@ -17,6 +17,10 @@
     },
     "mainSection": {
       "title": "Lyric size online"
+    },
+    "footer": {
+      "contact": "bohdan.ceo.dev@gmail.com",
+      "copyright": "Vival Poerty Web App"
     }
   }
   
