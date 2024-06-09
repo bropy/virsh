@@ -27,7 +27,10 @@ function App() {
     document.title = translations[language]?.mainSection?.title || "Lyric Size Online";
     window.history.replaceState(null, '', `/${language}`);
   }, [language]); 
-
+  const handleStyleSelect = (style) => {
+    const styleIndex = translations[language].style.verseStyles.indexOf(style);
+    setSelectedStyle(styleIndex);
+  };
   if (!translations[language]) {
     return <div>Loading translations...</div>;
   }
@@ -35,15 +38,13 @@ function App() {
   return (
     <div>
       <Header language={language} setLanguage={setLanguage} translations={translations} />
-      <Select 
+      <Select
         language={language}
-        setLanguage={setLanguage}
         translations={translations}
-        selectedStyle={selectedStyle}
-        setSelectedStyle={setSelectedStyle}
+        onStyleSelect={handleStyleSelect} 
       />
       <h1 className='main-header'>{translations[language].mainSection.title}</h1>
-      <Form 
+      <Form
         selectedStyle={selectedStyle}
         translations={translations}
         language={language}

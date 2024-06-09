@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import '../styles/Select.css';
 
-const Select = ({ language, translations }) => {
+const Select = ({ language, translations,onStyleSelect  }) => {
   const pastelColors = useMemo(() => ['#E6A7FF', '#A7E6C7', '#FFE6A7', '#FFA7A7', '#A7CCE6'], []);
   const [colorIndex, setColorIndex] = useState(0);
   const [selectedStyle, setSelectedStyle] = useState(0);
@@ -9,6 +9,7 @@ const Select = ({ language, translations }) => {
   const handleButtonClick = (index) => {
     setColorIndex((prevIndex) => (prevIndex + 1) % pastelColors.length);
     setSelectedStyle(index);
+    onStyleSelect(verseStyles[index]); // Call the callback to update the parent
   };
 
   const getButtonColor = (index) => {
@@ -39,9 +40,6 @@ const Select = ({ language, translations }) => {
           </button>
         ))}
       </div>
-      <p className="selected-style">
-        {verseStyles[selectedStyle] || "No style selected"}
-      </p>
     </div>
   );
 };

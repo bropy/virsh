@@ -23,7 +23,7 @@ const Header = ({ language, setLanguage, translations }) => {
     <header>
       <div className="logo-container"> {/* Added container for logo and name */}
         <img src={logo} alt="Logo" className="logo" />
-        <h1>Vival Poerty</h1>
+        <h1>Vival Poetry</h1>
       </div>
       <div className="language-dropdown">
         <button className="selected-language" onClick={toggleDropdown}>

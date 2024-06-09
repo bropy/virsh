@@ -29,7 +29,16 @@
 
 /* ... (rest of the CSS is the same) */
 
+.valid-line {
+  background-color: #e0ffe0; /* Light green for valid lines */
+}
+.main-header{
+  margin-left: 1rem;
+}
 
+.invalid-line {
+  background-color: #ffe0e0; /* Light red for invalid lines */
+}
 .verse-input * {  /* Target all elements within the textarea */
   font-size: medium !important; /* Force inherit the correct size */
   font-family: serif !important; /* Force inherit the correct font */
@@ -39,7 +48,9 @@
   display: flex;
   position: relative;
 }
-
+.verse-input:focus {
+  outline: none; /* Remove the default outline */
+}
 .line-numbers {
   border-right: 1px solid #ccc;
   padding: 10px;
@@ -54,7 +65,9 @@ border-radius: 10px;
 
 .verse-container{
   border-radius: 10px;
-  border:1px solid rgb(99, 99, 99);
+  box-shadow: 
+  0 11px 11px rgba(63, 63, 63, 0.23), /* Subtle base shadow */
+  0 4px 8px rgba(65, 65, 65, 0.48);
 }
 .verse-input {
   flex: 1;

@@ -8,7 +8,8 @@
     gap: 10px;
     margin-right: 2%;
   }
-  
+  #style-chooser{
+  margin-left: 1rem;}
   .style-buttons button {
     color: #323232;
     margin-right: 5px;
