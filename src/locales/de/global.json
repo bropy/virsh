@@ -1,22 +1,63 @@
 {
-    "header": {
+  "header": {
       "chooseLanguage": "Sprache: "
-    },
-    "style": {
-      "chooseStyle": "Versart wählen:",
+  },
+  "style": {
+      "chooseStyle": "Wählen Sie den Stil des Gedichts",
       "selectedStyle": "Aktueller Stil",
+      "lines": "Zeilen",
+      "syllablesPerLine": "Silben pro Zeile",
+      "additionalInfo": "Zusätzliche Informationen",
       "verseStyles": [
-        "Freie Verse",
-        "Sonett",
-        "Haiku",
-        "Limerick",
-        "Ballade",
-        "Ode",
-        "Epos"
+          "Freier Stil",
+          "Sonett",
+          "Haiku",
+          "Limerick",
+          "Ballade",
+          "Ode",
+          "Epos"
+      ],
+      "verseStyleDetails": [
+          {
+              "description": "Schreiben Sie, wie Sie möchten!)",
+              "lines": "Unterschiedliche Anzahl",
+              "additionalInfo": "Beliebt in der modernen Poesie."
+          },
+          {
+              "description": "14 Zeilen, jambischer Pentameter, spezifisches Reimschema (ABABCDCDEFEFGG).",
+              "lines": 14,
+              "syllables": 10
+          },
+          {
+              "description": "3 Zeilen, Silbenstruktur 5-7-5.",
+              "lines": 3,
+              "syllables": [5, 7, 5],
+              "additionalInfo": "Stammt aus Japan."
+          },
+          {
+              "description": "5 Zeilen, Reimschema AABBA, humorvoll und oft unsinnig.",
+              "lines": 5,
+              "syllables": [8, 8, 5, 5, 8]
+          },
+          {
+              "description": "Erzählgedicht, oft mit tragischer oder heroischer Handlung, kann sich wiederholende Zeilen haben.",
+              "lines": "Unterschiedliche Anzahl"
+          },
+          {
+              "description": "Erhabenes Gedicht, das einer bestimmten Person, einem Ereignis oder einer Idee gewidmet ist.",
+              "lines": "Unterschiedliche Anzahl"
+          },
+          {
+              "description": "Langes Erzählgedicht über Heldentaten.",
+              "lines": "Große Anzahl"
+          }
       ]
-    },
+  },
     "mainSection": {
-      "title": "Lyric Größe online"
+        "title": "Online Versmaß"
+    },
+    "footer": {
+        "contact": "bohdan.ceo.dev@gmail.com",
+        "copyright": "Vival Poetry Web App"
     }
-  }
-  
+}

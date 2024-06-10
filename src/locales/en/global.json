@@ -1,26 +1,63 @@
 {
-    "header": {
+  "header": {
       "chooseLanguage": "Language: "
-    },
-    "style": {
-      "chooseStyle": "Choose verse style:",
-      "selectedStyle":"Current style",
+  },
+  "style": {
+      "chooseStyle": "Choose the style of the poem",
+      "selectedStyle": "Current style",
+      "lines": "Lines",
+      "syllablesPerLine": "Syllables per line",
+      "additionalInfo": "Additional information",
       "verseStyles": [
-        "Free verse",
-        "Sonnet",
-        "Haiku",
-        "Limerick",
-        "Ballad",
-        "Ode",
-        "Epic"
+          "Free style",
+          "Sonnet",
+          "Haiku",
+          "Limerick",
+          "Ballad",
+          "Ode",
+          "Epic"
+      ],
+      "verseStyleDetails": [
+          {
+              "description": "Create as you wish!)",
+              "lines": "Different number",
+              "additionalInfo": "Popular in modern poetry."
+          },
+          {
+              "description": "14 lines, iambic pentameter, specific rhyme scheme (ABABCDCDEFEFGG).",
+              "lines": 14,
+              "syllables": 10
+          },
+          {
+              "description": "3 lines, syllable structure 5-7-5.",
+              "lines": 3,
+              "syllables": [5, 7, 5],
+              "additionalInfo": "Originates from Japan."
+          },
+          {
+              "description": "5 lines, rhyme scheme AABBA, humorous and often nonsensical.",
+              "lines": 5,
+              "syllables": [8, 8, 5, 5, 8]
+          },
+          {
+              "description": "Narrative poem, often with a tragic or heroic plot, may have repeating lines.",
+              "lines": "Different number"
+          },
+          {
+              "description": "Elevated poem dedicated to a specific person, event, or idea.",
+              "lines": "Different number"
+          },
+          {
+              "description": "Long narrative poem about heroic deeds.",
+              "lines": "Large number"
+          }
       ]
-    },
-    "mainSection": {
-      "title": "Metrical foot online"
-    },
-    "footer": {
+  },
+  "mainSection": {
+      "title": "Metrical Foot Online"
+  },
+  "footer": {
       "contact": "bohdan.ceo.dev@gmail.com",
       "copyright": "Vival Poetry Web App"
-    }
   }
-  
+}

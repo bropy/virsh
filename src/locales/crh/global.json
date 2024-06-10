@@ -1,22 +1,63 @@
 {
-    "header": {
+  "header": {
       "chooseLanguage": "Til: "
-    },
-    "style": {
-      "chooseStyle": "Şiir türüni seçin:",
-      "selectedStyle": "Ağımdaki tür",
+  },
+  "style": {
+      "chooseStyle": "Şiir uslubını seçiniz",
+      "selectedStyle": "Ağımdaki uslub",
+      "lines": "Satırlar",
+      "syllablesPerLine": "Satırdaki heceler",
+      "additionalInfo": "Ek bilgi",
       "verseStyles": [
-        "Serbest şiir",
-        "Sonet",
-        "Haiku",
-        "Limerick",
-        "Ballada",
-        "Qaside",
-        "Destan"
+          "Serbest uslub",
+          "Sone",
+          "Haiku",
+          "Limerick",
+          "Ballad",
+          "Ode",
+          "Destan"
+      ],
+      "verseStyleDetails": [
+          {
+              "description": "İstediğiniz gibi yaratın!)",
+              "lines": "Farklı sayıda",
+              "additionalInfo": "Modern şiirde popüler."
+          },
+          {
+              "description": "14 satır, beş ayaklı hece ölçüsü, belirli bir uyak düzeni (ABABCDCDEFEFGG).",
+              "lines": 14,
+              "syllables": 10
+          },
+          {
+              "description": "3 satır, hece yapısı 5-7-5.",
+              "lines": 3,
+              "syllables": [5, 7, 5],
+              "additionalInfo": "Japonya'dan gelir."
+          },
+          {
+              "description": "5 satır, uyak düzeni AABBA, komik ve çoğunlukla anlamsız.",
+              "lines": 5,
+              "syllables": [8, 8, 5, 5, 8]
+          },
+          {
+              "description": "Anlatı şiiri, genellikle trajik veya kahramanlık konusu olan, tekrarlayan satırlar olabilir.",
+              "lines": "Farklı sayıda"
+          },
+          {
+              "description": "Belirli bir kişiye, olaya veya fikre adanmış yüce şiir.",
+              "lines": "Farklı sayıda"
+          },
+          {
+              "description": "Kahramanlık eylemleri hakkında uzun bir anlatı şiiri.",
+              "lines": "Çok sayıda"
+          }
       ]
-    },
-    "mainSection": {
-      "title": "Lirik boyu online"
-    }
+  },
+  "mainSection": {
+      "title": "Online Şiir Ölçüsü"
+  },
+  "footer": {
+      "contact": "bohdan.ceo.dev@gmail.com",
+      "copyright": "Vival Poetry Web App (Qırım Tatar tilini ögren ve onıñ dünyag'a sesini eşittir!)"
   }
-  
+}

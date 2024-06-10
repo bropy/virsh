@@ -1,22 +1,63 @@
 {
-    "header": {
+  "header": {
       "chooseLanguage": "Język: "
-    },
-    "style": {
-      "chooseStyle": "Wybierz styl wiersza:",
+  },
+  "style": {
+      "chooseStyle": "Wybierz styl wiersza",
       "selectedStyle": "Aktualny styl",
+      "lines": "Linie",
+      "syllablesPerLine": "Sylaby w wersie",
+      "additionalInfo": "Dodatkowe informacje",
       "verseStyles": [
-        "Wiersz wolny",
-        "Sonet",
-        "Haiku",
-        "Limerick",
-        "Ballada",
-        "Oda",
-        "Epos"
+          "Styl dowolny",
+          "Sonet",
+          "Haiku",
+          "Limerick",
+          "Ballada",
+          "Oda",
+          "Epos"
+      ],
+      "verseStyleDetails": [
+          {
+              "description": "Twórz jak chcesz!)",
+              "lines": "Różna liczba",
+              "additionalInfo": "Popularny w nowoczesnej poezji."
+          },
+          {
+              "description": "14 wersów, pentametr jambiczny, określony schemat rymów (ABABCDCDEFEFGG).",
+              "lines": 14,
+              "syllables": 10
+          },
+          {
+              "description": "3 wersy, struktura sylab 5-7-5.",
+              "lines": 3,
+              "syllables": [5, 7, 5],
+              "additionalInfo": "Pochodzi z Japonii."
+          },
+          {
+              "description": "5 wersów, schemat rymów AABBA, humorystyczny i często nonsensowny.",
+              "lines": 5,
+              "syllables": [8, 8, 5, 5, 8]
+          },
+          {
+              "description": "Wiersz narracyjny, często o tragicznej lub heroicznej fabule, może mieć powtarzające się wersy.",
+              "lines": "Różna liczba"
+          },
+          {
+              "description": "Wzniosły wiersz poświęcony konkretnej osobie, wydarzeniu lub idei.",
+              "lines": "Różna liczba"
+          },
+          {
+              "description": "Długi poemat narracyjny o bohaterskich czynach.",
+              "lines": "Duża liczba"
+          }
       ]
-    },
-    "mainSection": {
-      "title": "Rozmiar liryki online"
-    }
+  },
+  "mainSection": {
+      "title": "Miernik Wiersza Online"
+  },
+  "footer": {
+      "contact": "bohdan.ceo.dev@gmail.com",
+      "copyright": "Vival Poetry Web App"
   }
-  
+}
