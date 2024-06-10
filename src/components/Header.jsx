@@ -3,7 +3,7 @@ import '../styles/Header.css';
 import logo from '../images/logo.png';
 
 
-const Header = ({ language, setLanguage, translations }) => {
+const Header = ({ language, setLanguage }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {

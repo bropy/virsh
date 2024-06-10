@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Form.css';
-import poemConstraints from '../data/poems.json';
 
 function Form({ selectedStyle, translations, language }) {
   const [text, setText] = useState('');

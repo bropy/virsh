@@ -8,8 +8,6 @@ import Header from './components/Header';
 import Form from './components/Form';
 import Select from './components/Select';
 import Footer from './components/Footer'; 
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
 import "./App.css";
 
@@ -20,19 +18,8 @@ const translations = {
   pl: plTranslations,
   de: deTranslations,
 };
-const firebaseConfig = {
-  apiKey: "AIzaSyCK8hbj1S3AQixvnxKIcDVFQB-ES4Y4p6Y",
-  authDomain: "poetryapp-1242c.firebaseapp.com",
-  projectId: "poetryapp-1242c",
-  storageBucket: "poetryapp-1242c.appspot.com",
-  messagingSenderId: "278664736516",
-  appId: "1:278664736516:web:316bb8b1957c390f3caa51",
-  measurementId: "G-57MQLMFLVY"
-};
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 function App() {
   const [language, setLanguage] = useState('en');
   const [selectedStyle, setSelectedStyle] = useState(0);
