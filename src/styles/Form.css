@@ -27,8 +27,6 @@
   margin-bottom: 10%;
 }
 
-/* ... (rest of the CSS is the same) */
-
 .main-header{
   margin-left: 1rem;
 }
@@ -37,11 +35,7 @@
   font-size: medium !important; /* Force inherit the correct size */
   font-family: serif !important; /* Force inherit the correct font */
 }
-/* Form.css */
-.verse-container {
-  display: flex;
-  position: relative;
-}
+
 .verse-input:focus {
   outline: none; /* Remove the default outline */
 }
@@ -53,7 +47,6 @@
   line-height: 1.5;
   font-family: serif;
 border-radius: 10px;
-  /* Cool Inset Shadow */
   box-shadow: inset 2px 0 5px rgba(58, 58, 58, 0.15); /* Adjust values as needed */
 }
 

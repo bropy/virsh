@@ -19,7 +19,6 @@ const translations = {
   de: deTranslations,
 };
 
-// Initialize Firebase
 function App() {
   const [language, setLanguage] = useState('en');
   const [selectedStyle, setSelectedStyle] = useState(0);

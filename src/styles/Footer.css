@@ -24,6 +24,8 @@ footer {
   
   .contact-info a:hover {
     text-decoration: underline;
+    filter: drop-shadow(0 0 5px #61afef);
+
   }
   
   .copyright {
@@ -31,12 +33,6 @@ footer {
     margin-top: 10px; 
   }
   
-  /* Optional: Add a subtle glow effect on hover */
-  .contact-info a:hover {
-    filter: drop-shadow(0 0 5px #61afef);
-  }
-  
-  /* Responsive Design */
   @media (max-width: 600px) {
     .footer-content {
       flex-direction: column; 
